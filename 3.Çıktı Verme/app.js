@@ -1,11 +1,10 @@
-// document write ile çıktı verme ******************************************************
-
+// !DOCUMENT WRİTE İLE ÇIKTI VERME #
 /*
 document.write("Hello World <br>");
 document.write("Hello Aika <br>");
 document.write("345 <br>");
 
-// console.log ile çıktı verme ******************************************************
+! console.log ile çıktı verme #
 
 console.log("Hello World");
 console.log("Hello Aika");
@@ -18,7 +17,7 @@ let b = 10;
 console.log("iki sayinin total : ", a + b);
 console.clear();
 
-// alert ile çıktı verme ******************************************************
+! alert ile çıktı verme #
 
 console.log(window); // pencereyi gösterir
 
