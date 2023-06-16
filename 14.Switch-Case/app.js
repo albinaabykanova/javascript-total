@@ -27,3 +27,49 @@ switch (sayi) {
 */
 
 //todo 2.Örnek
+
+let yeniSatir = "\r\n";
+let metin =
+  "1-Pazartesi" +
+  yeniSatir +
+  "2-Salı" +
+  yeniSatir +
+  "3-Çarşamba" +
+  yeniSatir +
+  "4-Perşembe" +
+  yeniSatir +
+  "5-Cuma" +
+  yeniSatir +
+  "6-Cumartesi" +
+  yeniSatir +
+  "7-Pazar" +
+  yeniSatir +
+  "Lütfen bir seçim yapınız:";
+
+let deger = prompt(metin);
+switch (deger) {
+  case "1":
+    console.log("Bugün günlerden Pazartesi");
+    break;
+  case "2":
+    console.log("Bugün günlerden Salı");
+    break;
+  case "3":
+    console.log("Bugün günlerden Çarşamba");
+    break;
+  case "4":
+    console.log("Bugün günlerden Perşembe");
+    break;
+  case "5":
+    console.log("Bugün günlerden Cuma");
+    break;
+  case "6":
+    console.log("Bugün günlerden Cumartesi");
+    break;
+  case "7":
+    console.log("Bugün günlerden Pazar");
+    break;
+  default:
+    console.log("Lütfen 1-7 arasında bir değer giriniz");
+    break;
+}
