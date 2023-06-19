@@ -1,4 +1,4 @@
 /*
-   ? Tür Dönüşümleri ------------ DATA TYPE
+   ? Tür Dönüşümleri ------------ DATA TYPES
 
 */
