@@ -10,6 +10,15 @@
 
    ---> splice(index, incdex) metodu: eleman eklemek ve silmek için kullanılır.
 
-   ----> toStrin() metodu: Dizinin elemanlarını stringe çevirir.
+   ----> toString() metodu: Dizinin elemanlarını stringe çevirir.
    ---> join() metodu: Dizinin elemanlarını birleştirir.
 */
+
+function canVote(age) {
+  const voteResult = [false, true];
+  return voteResult[Number(age >= 18)];
+}
+
+console.log(canVote(25)); // true
+console.log(canVote(18)); // true
+console.log(canVote(17)); // false
