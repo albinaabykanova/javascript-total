@@ -12,13 +12,55 @@
 
    ----> toString() metodu: Dizinin elemanlarını stringe çevirir.
    ---> join() metodu: Dizinin elemanlarını birleştirir.
+
+   ---> concat() metodu: Dizileri birleştirir.
+   ---> slice(dilimlemek) metodu: Dizinin belirli bir kısmını almak için kullanılır.
 */
 
-function canVote(age) {
-  const voteResult = [false, true];
-  return voteResult[Number(age >= 18)];
-}
+// TODO ORNEK 1
 
-console.log(canVote(25)); // true
-console.log(canVote(18)); // true
-console.log(canVote(17)); // false
+let arabalar = ["BMW", "Mercedes", "Opel", "Mazda", "toyota", "mamalak"];
+
+// ! push() metodu
+/*
+arabalar.push("Renault");
+console.log(arabalar);
+*/
+
+// ! unshift() metodu
+/*
+arabalar.unshift("Fiat");
+console.log(arabalar);
+*/
+
+// ! pop() metodu
+/*
+let silinenEleman = arabalar.pop();
+console.log(arabalar);
+console.log(silinenEleman);
+*/
+
+// ! shift() metodu
+/*
+arabalar.shift();
+console.log(arabalar);
+*/
+
+// ! splice() metodu
+/*
+arabalar.splice(1, 0, "Fiat", "Ford");
+console.log(arabalar);
+*/
+
+// ! toString() metodu
+/*
+console.log(typeof arabalar);
+let stringArabalar = arabalar.toString();
+console.log(typeof stringArabalar);
+console.log(stringArabalar);
+*/
+
+// ! join() metodu
+
+let stringArabalar = arabalar.join(".................");
+console.log(stringArabalar);
