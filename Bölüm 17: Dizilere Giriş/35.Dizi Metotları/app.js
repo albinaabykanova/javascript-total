@@ -114,3 +114,34 @@ if (index == 0) {
 let sonuc = arabalar1.includes("audi");
 console.log(sonuc);
 */
+
+/*
+const createCounter = (n) => {
+  if (typeof n === "number") {
+    const arr = [n];
+    for (let i = 0; i < 2; i++) {
+      arr.push(++n);
+    }
+    return arr;
+  }
+};
+
+console.log(createCounter(10)); // [10, 11, 12]
+*/
+
+/*
+const createCounter1 = (n) => {
+  if (typeof n === "number") {
+    return () => {
+      const currentCount = n;
+      n++;
+      return currentCount;
+    };
+  }
+};
+
+const counter = createCounter1(10);
+console.log(counter()); // Output: 10
+console.log(counter()); // Output: 11
+console.log(counter()); // Output: 12
+*/
