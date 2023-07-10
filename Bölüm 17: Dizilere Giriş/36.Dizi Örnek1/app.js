@@ -30,24 +30,24 @@ let urun6 = {
 };
 
 let urunler = [urun1, urun2, urun3, urun4, urun5, urun6];
-let filteredProducts = [];
-let userProductName = prompt("Ürün ismi giriniz");
+let filtreliUrunler = [];
+let kullanıcıUrunIsmi = prompt("Ürün ismi giriniz");
 
-getFiltredProducts(urunler);
+filtreliUrunleriDoldur(urunler);
+filtreliUrunleriYazdir(filtreliUrunler);
 
-function getFiltredProducts(urunler) {
+function filtreliUrunleriDoldur(urunler) {
   urunler.forEach(function (urun) {
-    if (urun.isim.toUpperCase().includes(userProductName.toUpperCase(), 0)) {
-      filteredProducts.push(urun);
+    if (urun.isim.toUpperCase().includes(kullanıcıUrunIsmi.toUpperCase(), 0)) {
+      filtreliUrunler.push(urun);
     }
   });
 }
 
-function filteredProductsWrite(urunler) {
+function filtreliUrunleriYazdir(urunler) {
   urunler.forEach(function (urun) {
     console.log("--------------------------------");
     console.log("|" + urun.isim + " | " + urun.kategori + " | " + urun.fiyat);
-
     console.log("--------------------------------");
   });
 }
