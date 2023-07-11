@@ -2,29 +2,34 @@ let kitap1 = {
   isim: "Her şeyi Düşünme",
   yazar: "Anne Bogel",
   fiayt: 25,
+  raf: "1.5 RAF",
 };
 
 let kitap2 = {
   isim: "Hiçbir Karşilaşma Tesadüf Değildir",
   yazar: "Hakan Menguç",
   fiayt: 30,
+  raf: "2.3 RAF",
 };
 
 let kitap3 = {
   isim: "İnsan Neyle Yaşar",
   yazar: "Tolstoy",
   fiayt: 34,
+  raf: "3.4 RAF",
 };
 
 let kitap4 = {
   isim: "Zafer Sizlanarak Kazanılmaz",
   yazar: "Haluk Tatar",
   fiayt: 45,
+  raf: "4.1 RAF",
 };
 let kitap5 = {
   isim: "Şeker Portakalı",
   yazar: "Jose Mauro de Vasconselo",
   fiayt: 22,
+  raf: "5.3 RAF",
 };
 
 let kitaplar = [kitap1, kitap2, kitap3, kitap4, kitap5];
@@ -62,15 +67,53 @@ let raf55 = { kod: "5.5.RAF", goster: false };
 let raflar = [
   [raf51, raf52, raf53, raf54, raf55],
   [raf41, raf42, raf43, raf44, raf45],
-  [raf31, raf32, raf33, raf34, raf35][(raf21, raf22, raf23, raf24, raf25)][
-    (raf11, raf12, raf13, raf14, raf15)
-  ],
+  [raf31, raf32, raf33, raf34, raf35],
+  [raf21, raf22, raf23, raf24, raf25],
+  [raf11, raf12, raf13, raf14, raf15],
 ];
 
 function rafOlustur() {
   console.clear();
+  let satir = "";
   for (let i = 0; i < raflar.length; i++) {
-    for (let j = 0; j < 5; j++) {}
-    satir += "|" + raflar[i][j];
+    for (let j = 0; j < 5; j++) {
+      satir += " | " + (raflar[i][j].goster ? raflar[i][j].kod : "-----") + "";
+    }
+    console.log(satir);
+    console.log("----------------------------------------");
+    satir = "";
   }
+}
+
+function kodBul(kitapIsmi) {
+  let rafKod = null;
+  kitaplar.forEach(function (kitap) {
+    if (kitap.isim.toUpperCase().includes(kitapIsmi.toUpperCase(), 0)) {
+      rafKod = kitap.raf;
+    }
+  });
+  return rafKod;
+}
+
+function raftaGoster(rafKodu) {
+  for (let i = 0; i < raflar.length; i++) {
+    for (let j = 0; j < 5; j++) {
+      if (raflar[i][j].kod == rafKodu) {
+        raflar[i][j].goster = true;
+        break;
+      }
+    }
+  }
+}
+
+rafOlustur();
+
+let kitapIsmi = prompt("Lütfen bir kitap ismi giriniz");
+let rafKod = kodBul(kitapIsmi);
+
+if (rafKod != null) {
+  raftaGoster(rafKod);
+  rafOlustur();
+} else {
+  alert("Girdiğiniz kitap kütüphanemizde bulunmamaktadır");
 }
