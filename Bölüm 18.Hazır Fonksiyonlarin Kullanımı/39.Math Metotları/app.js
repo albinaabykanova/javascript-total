@@ -10,7 +10,7 @@
 
 6-Random 
 7-Abs - mutlak değer almak için kullanılır |-12| = 12 
-8-Sqrt 
+8-Sqrt - karekök almak için kullanılır
 9-Pow 
 */
 
@@ -24,4 +24,6 @@ console.log(Math.round(a));
 
 // console.log(Math.max(33, 5, 78));
 // console.log(Math.min(3, 0, 12));
-console.log(Math.abs(b));
+// console.log(Math.abs(b));
+
+console.log(Math.sqrt(46));
