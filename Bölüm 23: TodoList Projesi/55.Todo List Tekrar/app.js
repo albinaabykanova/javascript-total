@@ -1,5 +1,6 @@
 // Tüm Elementleri Seçmek
 
+/* 
 const form = document.querySelector("todoAddForm");
 const addInput = document.querySelector("#todoName");
 const todoList = document.querySelector(".list-group");
@@ -28,13 +29,13 @@ function addTodo(e) {
 }
 
 function addTodoToUI(newTodo) {
-  /*
+  
 <li class="list-group-item d-flex justify-content-between">Todo 1
                             <a href="#" class="delete-item">
                                 <i class="fa fa-remove"></i>
                             </a>
                         </li>
-                        */
+                       
   const li = document.createElement("li");
   li.className = "list-group-item d-flex justify-content-between";
   li.textContent = newTodo;
@@ -52,5 +53,4 @@ function addTodoToUI(newTodo) {
 
   addInput.value = "";
 }
-
-function addTodoToStroge(newTodo) {}
+*/
