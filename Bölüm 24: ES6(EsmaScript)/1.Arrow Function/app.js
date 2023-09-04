@@ -1,3 +1,4 @@
+/*
 //1
 function yazdır() {
   console.log("selam");
@@ -18,3 +19,4 @@ const yazdır2 = (firstName) => {
   console.log("privet", firstName);
 };
 yazdır2("fifa");
+*/
